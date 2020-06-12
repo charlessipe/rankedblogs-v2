@@ -6,7 +6,7 @@
     >
     <h1>Ranked Blogs Vue</h1>
 
-    <p>User name: <strong><span class="text-secondary">{{user}}</span></strong></p>
+    <p>User name: <strong><span class="text-secondary">{{user.displayName}}</span></strong></p>
     
     <a href="#" 
        role="button" 
