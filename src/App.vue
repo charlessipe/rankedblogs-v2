@@ -10,6 +10,7 @@
       :meetings="meetings"
       @logout="logout"
       @addMeeting="addMeeting"
+      @upVote = "upVote"
     />
   </div>
 </template>
@@ -45,6 +46,9 @@ export default {
         name: payload,
         createdAt: Firebase.firestore.FieldValue.serverTimestamp()
       })
+    },
+    upVote: function(payload) {
+      alert(payload);
     }
   },
   mounted() {
@@ -52,9 +56,10 @@ export default {
       if (user) {
         this.user = user;
 
-        db.collection("users")
-        .doc(this.user.uid)
-        .collection("meetings")
+        db.collection("topic")
+        //.doc(this.user.uid)
+        .doc("kindergarten")
+        .collection("kindergarten")
         .onSnapshot(snapshot => {
           snapshot.forEach( doc => {
             this.meetings.push({
@@ -62,7 +67,9 @@ export default {
               name: doc.data().name,
               mainUrl: doc.data().mainUrl,
               pageAuthority: doc.data().pageAuthority,
-              linkingSites: doc.data().linkingSites
+              linkingSites: doc.data().linkingSites,
+              votes: doc.data().votes,
+              articleUrl: doc.data().articleUrl
             });
           });
         });
