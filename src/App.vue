@@ -48,7 +48,14 @@ export default {
       })
     },
     upVote: function(payload) {
-      alert(payload);
+      db.collection("topic")
+      .doc("kindergarten")
+      .collection("kindergarten")
+      .doc(payload)
+      .update({
+        votes: Firebase.firestore.FieldValue.increment(1)  // increment vote number by 1
+      })
+
     }
   },
   mounted() {
