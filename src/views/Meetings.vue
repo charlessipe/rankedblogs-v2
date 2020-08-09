@@ -28,7 +28,7 @@
                       <td><a v-bind:href="item.mainUrl">{{item.name}}</a></td>
                       <td>{{item.pageAuthority}}</td>
                       <td>{{item.linkingSites}}</td>
-                      <td>{{item.articleUrl}}</td>
+                      <td><a v-bind:href="item.articleUrl">{{item.articleName}}</a></td>
                     </tr>
                   </tbody>
                 </table>

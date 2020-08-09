@@ -76,7 +76,8 @@ export default {
               pageAuthority: doc.data().pageAuthority,
               linkingSites: doc.data().linkingSites,
               votes: doc.data().votes,
-              articleUrl: doc.data().articleUrl
+              articleUrl: doc.data().articleUrl,
+              articleName: doc.data().articleName
             });
           });
         });
