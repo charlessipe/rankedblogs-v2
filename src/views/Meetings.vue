@@ -15,7 +15,6 @@
                       <th>Rank</th>
                       <th>Votes</th>
                       <th>Name</th>
-                      <th>Website</th>
                       <th>Page Authority</th>
                       <th>Linking Sites</th>
                       <th>Last Article</th>
@@ -26,8 +25,7 @@
               :key="item.id">
                       <td>{{index+1}}</td>
                       <td><img @click="$emit('upVote', item.id)" src="https://cool-marketing-stuff.s3.amazonaws.com/thumbs-up.png"> {{item.votes}}</td>
-                      <td>{{item.name}}</td>
-                      <td>{{item.mainUrl}}</td>
+                      <td><a v-bind:href="item.mainUrl">{{item.name}}</a></td>
                       <td>{{item.pageAuthority}}</td>
                       <td>{{item.linkingSites}}</td>
                       <td>{{item.articleUrl}}</td>
