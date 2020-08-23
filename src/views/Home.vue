@@ -31,6 +31,13 @@
       to="/meetings"
       v-if="user"
     >Meetings</router-link>
+    <br>
+    <br>
+    <router-link
+      class="btn btn-primary"
+      to="/baking"
+      v-if="user"
+    >Baking</router-link>
     
 
     </div>

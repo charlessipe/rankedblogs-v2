@@ -58,13 +58,12 @@ export default {
 
     }
   },
-  mounted() {
+  /* mounted() {
     Firebase.auth().onAuthStateChanged(user => {
       if (user) {
         this.user = user;
 
         db.collection("topic")
-        //.doc(this.user.uid)
         .doc("kindergarten")
         .collection("kindergarten")
         .onSnapshot(snapshot => {
@@ -77,14 +76,17 @@ export default {
               linkingSites: doc.data().linkingSites,
               votes: doc.data().votes,
               articleUrl: doc.data().articleUrl,
-              articleName: doc.data().articleName
+              articleName: doc.data().articleName,
+              twitterName: doc.data().twitterName,
+              domainAuthority: doc.data().domainAuthority,
+              twitterFollowers: doc.data().twitterFollowers
             });
           });
         });
-
       }
     });
-  },
+  }, */
+
   components: {
     Navigation
   }
