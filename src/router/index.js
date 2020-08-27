@@ -5,6 +5,7 @@ import Login from "../views/Login.vue";
 import Meetings from "../views/Meetings.vue";
 import Register from "../views/Register.vue";
 import Baking from "../views/Baking.vue";
+import OnlineMarketing from "../views/OnlineMarketing.vue";
 
 Vue.use(VueRouter);
 
@@ -33,6 +34,11 @@ const routes = [
     path: "/baking",
     name: "baking",
     component: Baking
+  },
+  {
+    path: "/online-marketing",
+    name: "online-marketing",
+    component: OnlineMarketing
   },
   {
     path: "*",

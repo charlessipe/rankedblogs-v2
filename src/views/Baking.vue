@@ -109,6 +109,7 @@
 
   </div>
 </template>
+
 <script>
 //import {FontAwesomeIcon} from "@fortawesome/vue-fontawesome"
 import Firebase from "firebase";
