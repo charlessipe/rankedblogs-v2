@@ -4,7 +4,7 @@
       <div class="col-12 col-md-9 col-lg-7">
         <h1
           class="font-weight-light text-center"
-        >Top 100 Baking Blogs of 2020</h1>
+        >Top 101 Baking Blogs of 2020</h1>
 
               <div class="container">       
                 <table class="table table-bordered">
@@ -140,8 +140,9 @@ export default {
         .doc("baking")
         .collection("baking")
         .onSnapshot(snapshot => {
+          const snapData = [];
           snapshot.forEach( doc => {
-            this.meetings.push({
+            snapData.push({
               id: doc.id,
               name: doc.data().name,
               mainUrl: doc.data().mainUrl,
@@ -155,6 +156,7 @@ export default {
               twitterFollowers: doc.data().twitterFollowers
             });
           });
+          this.meetings = snapData;
         });
       }
     });

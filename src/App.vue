@@ -49,14 +49,13 @@ export default {
     },
     upVote: function(payload) {
       db.collection("topic")
-      .doc("kindergarten")
-      .collection("kindergarten")
+      .doc("baking")
+      .collection("baking")
       .doc(payload)
       .update({
         votes: Firebase.firestore.FieldValue.increment(1)  // increment vote number by 1
       })
-
-    }
+    } 
   },
   /* mounted() {
     Firebase.auth().onAuthStateChanged(user => {
