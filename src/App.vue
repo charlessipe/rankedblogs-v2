@@ -49,8 +49,8 @@ export default {
     },
     upVote: function(payload) {
       db.collection("topic")
-      .doc("baking")
-      .collection("baking")
+      .doc("quilting")
+      .collection("quilting")
       .doc(payload)
       .update({
         votes: Firebase.firestore.FieldValue.increment(1)  // increment vote number by 1

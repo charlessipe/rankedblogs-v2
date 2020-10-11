@@ -6,6 +6,7 @@ import Meetings from "../views/Meetings.vue";
 import Register from "../views/Register.vue";
 import Baking from "../views/Baking.vue";
 import OnlineMarketing from "../views/OnlineMarketing.vue";
+import Quilting from "../views/Quilting.vue";
 
 Vue.use(VueRouter);
 
@@ -39,6 +40,11 @@ const routes = [
     path: "/online-marketing",
     name: "online-marketing",
     component: OnlineMarketing
+  },
+  {
+    path: "/quilting",
+    name: "quilting",
+    component: Quilting
   },
   {
     path: "*",
